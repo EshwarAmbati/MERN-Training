@@ -1,0 +1,116 @@
+/* h4{
+    color: black;
+    background-color: yellow;
+}
+#i1{
+    color: brown;
+}
+.heading{
+    font-size: 30px;
+    text-decoration: underline;
+    margin: 20px;
+    padding: 20px 150px;
+    border: solid black 2px;
+    
+
+}
+.html-grp{
+    font-size: 60px;
+    text-decoration: underline;
+} */
+/* .heading,.html-grp{
+    font-size: 60px;
+    text-decoration: underline;
+} */
+
+/* .root{
+background-color: aquamarine;
+padding: 12px;
+margin: 24px;
+border: solid black 2px;
+width: 200px;
+}
+.root1{
+    box-sizing: border-box;
+    background-color: aqua;
+    padding: 12px;
+    margin: 12px;
+    border: solid black 2px;
+    width: 200px;
+} */
+
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p#very-special{
+    color:aqua;
+} */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* div{
+    background-color: skyblue;
+    font-size: 2em;
+}
+p{
+    background-color: yellow;
+    width: 5em;
+    font-size: 4em;
+} */
+
+/* div{
+    text-align: center;
+    background-color: aqua;
+    width: fit-content;
+    margin: auto;    
+}
+.btn{
+    display: block;
+    background-color: aqua;
+    color: aliceblue;
+    width: fit-content;
+    margin: 10px auto;    
+    font-size: 16px;
+    padding: 0.4em 1em;
+    border-radius: 0.5em;
+    border: none;
+}
+.big{
+    font-size: 24px;
+}
+.small{
+    font-size: 12px;
+} */
+
+/* div{
+    font-size: 40px;
+}
+
+p{
+    font-size: 2rem;
+}
+html{
+    font-size: 20px;
+} */
+
+/* button{
+    background-color: aquamarine;
+    width: 100vw;
+    height: 100vh;
+} */
+/* div h3{
+    color: brown;
+}
+
+div ol h3{
+    color: blue;
+}
+h3+p{
+    color: blueviolet;
+} */

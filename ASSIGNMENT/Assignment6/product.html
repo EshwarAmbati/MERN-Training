@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .product-card{
+            padding: 12px;
+            border: 6px solid white;
+            margin: 16px auto;
+            float: left;
+            width: 25%;
+            height: 40%px;
+            background-color: antiquewhite;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+        img{
+            height: 70px;
+            width: 70px;
+        }
+        body{
+            background-color: antiquewhite;
+            text-align: center;
+        }
+        #root{
+            height: 200px;
+        }
+        *{
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+<script>
+    const root = document.getElementById('root')
+    const request=fetch('https://dummyjson.com/products');
+    request.then((result)=>{
+        const convertData = result.json();
+        convertData.then(renderUI);
+    })
+    .catch((error)=>{
+    console.log();
+    });
+
+    const renderUI = (data)=>{
+        const products = data.products;
+        for(let i=0;i<products.length;i++){
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            card.innerHTML=`
+                <h3>${products[i].title}</h3>
+                <p> Rs ${products[i].price}</p>
+                <img src="${products[i].thumbnail}"/>
+            `;
+            root.appendChild(card);
+        }
+    }
+
+</script>
+    
+</body>
+</html>

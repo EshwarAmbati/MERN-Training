@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML forms and css</title>
+</head>
+<body>
+    <!-- <form action="./contact.html">
+        <label>UserName:</label>
+        <input type="text" placeholder="Please enter your name" name="username">
+        <input type="number" placeholder="Please enter your age" name="user-age" value="18">
+        <input type="submit" value="Done">
+    </form> -->
+    <center>
+    <form method="get" action="./contact.html" novalidate>
+        <label>UserName:</label>
+        <input type="text" placeholder="Please enter your name" name="username" autocomplete="off" required><br/>
+        <label>Age</label>
+        <input type="number" placeholder="Please enter your age" name="user-age" value="18"><br/>
+
+
+        <label>Gender</label><br/>
+
+
+        <input id="m1" type="radio" value="male" name="Gender" required>
+        <label for="m1">Male</label><br/>
+
+        <input id="f1" type="radio" value="female" name="Gender">
+        <label for="f1">FeMale</label><br/>
+
+        <label>Hobbies</label><br/>
+
+
+        <input id="p1" type="checkbox" value="painting" name="Hobbies">
+        <label for="p1">painting</label><br/>
+
+        <input id="p2" type="checkbox" value="Please" name="Hobbies">
+        <label for="p2">playing</label><br/>
+
+        <input type="submit" value="Done">
+        <input type="reset">
+        <br/>
+        <textarea name="description" rows="4"></textarea><br/>
+        <select name="city" id="city" >
+            <option value="New York">New York</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+        </select>
+
+
+
+
+        <button type="submit">Done</button>
+        <button type="reset">reset</button>
+    </form>
+    </center>
+</body>
+</html>

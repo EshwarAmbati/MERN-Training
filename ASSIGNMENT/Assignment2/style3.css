@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* body>div{
+    background-color: blueviolet;
+
+    margin:40px;
+    height: 200px;
+    width: 200px;
+}
+.c1, .c2, .c3,.c4{
+    margin: 10px;
+    background-color: aliceblue;
+    font-size: 32px;
+    height: 72px;
+    width: 72px;
+}
+.c2,.c3{
+    position: relative;
+    left:75px;
+} */
+
+/* body >div{
+    background-color: pink;
+    margin: 10px;
+    height: 100px;
+    width: 100px;
+}
+.c1, .c2, .c3,.c4{
+    background-color:yellow;
+    font-size: 18px;
+    height: 20px;
+    width: 20px;
+}
+.c1{
+  position: absolute;
+  top:20px;
+  left: 25px;
+  z-index: 1;
+}
+.c2{
+    position: absolute;
+    top:30px;
+    left: 35px;
+    background-color: brown;
+}
+
+.c3{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.c4{
+   position: absolute;
+
+} */
+
+body >div{
+    background-color: pink;
+    margin: 10px;
+    height: 100px;
+    width: 100px;
+}
+.c1, .c2, .c3,.c4{
+    background-color:yellow;
+    font-size: 18px;
+    height: 20px;
+    width: 20px;
+}
+.c1{
+    position: absolute;
+}
+.c3{
+    position: absolute;
+    background-color: green;
+    height: 30px;
+}
+.c4{
+    position: relative;
+    z-index: 1;
+}

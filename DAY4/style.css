@@ -1,0 +1,36 @@
+/* *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 300vh;
+}
+.p1{
+    position: relative;
+    background-color: yellow;
+    height: 20px;
+    width: 20px;
+    top: 50px;
+    left: 50%;
+    position: absolute;
+}
+.p2{
+    position: relative;
+    background-color: blue;
+    height: 20px;
+    width: 20px;
+    position: fixed;
+} */
+ .container{
+    background-color: yellow;
+    height: 500px;
+    margin: 100px;
+
+ }
+ .child{
+    background-color: violet;
+    height: 40px;
+    width: 40px;
+    position: sticky;
+    top: 100px;
+ }

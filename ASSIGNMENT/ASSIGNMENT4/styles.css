@@ -1,0 +1,19 @@
+main{
+    padding: 24px;
+    background-color: gray;
+    min-height: 10px;
+    
+}
+
+main >div{
+    width: 22%;
+    height: fit-content;
+    padding: 16px;
+    background-color: azure;
+    margin: 12px auto;
+    
+}
+img{
+    width: 150px;
+    height: 150px;
+}
