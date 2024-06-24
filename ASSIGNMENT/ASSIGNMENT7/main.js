@@ -4,7 +4,7 @@ const url = require("url");
 
 const data = require("./data.json");
 
-// Function to read and serve HTML files
+
 async function serveHtmlFile(filePath, replacements = {}) {
     try {
         let fileContent = await fsPromises.readFile(filePath, "utf-8");
@@ -18,7 +18,7 @@ async function serveHtmlFile(filePath, replacements = {}) {
     }
 }
 
-// Function to generate product cards HTML
+
 function generateProductCards(data) {
     return data.map(product => `
         <div class="product-card">
@@ -30,7 +30,7 @@ function generateProductCards(data) {
     `).join('');
 }
 
-// Request handler function
+
 async function requestHandler(req, res) {
     const { query, pathname } = url.parse(req.url, true);
     
@@ -71,7 +71,6 @@ async function requestHandler(req, res) {
     }
 }
 
-// Create and start the server
 const server = http.createServer(requestHandler);
 
 server.listen(2000, () => {
