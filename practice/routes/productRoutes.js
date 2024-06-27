@@ -5,10 +5,12 @@ const {
     replaceProduct,
     deleteProduct,
     updateProduct,
+    getDataMiddleware,
 } = require("../controllers/productControllers.js");
 
 const productRouter = express.Router();
 
+productRouter.use(getDataMiddleware);
 productRouter.route("/")
     .get(getProducts)
     .post(createProduct);

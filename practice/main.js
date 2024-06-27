@@ -13,6 +13,7 @@
 //-----------------------------------------------------------------------------\
 
 const express = require('express');
+var morgan = require("morgan");
 const productRourter = require("./routes/productRoutes.js");
 
 const app = express();
@@ -27,6 +28,6 @@ app.use((req,res,next)=>{
 });
 
 //external middleware
-//app.use(morgan("dev"));
+app.use(morgan("dev"));
 app.use("/products", productRourter);
 app.listen(2000);
