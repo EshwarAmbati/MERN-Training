@@ -1,0 +1,17 @@
+const ProductInfoCard = ({ data }) => {
+    return (
+        <div className="products-info-card">
+            <h3>{data.title}</h3>
+            <div className="products-item-cards-container">
+                {data.products.map((elem) => (
+                    <div className="products-item-card" key={elem.title}>
+                        <img src={elem.img} alt={elem.title} />
+                        <h5>{elem.title}</h5>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+};
+
+export default ProductInfoCard;
