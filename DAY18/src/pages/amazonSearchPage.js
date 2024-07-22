@@ -1,25 +1,10 @@
-import { useEffect, useState } from "react";
 import CategoryBar from "../components/categoryBar";
 import Navbar from "../components/navbar";
-import { useNavigate } from "react-router-dom";
+import useGetProducts from "../hooks/useGetProducts";
 
-const SearchPage = ({ categories, searchText, setSearchText }) => {
-    const [products, setProducts] = useState([]);
-    const navigate = useNavigate();
-
-    async function getData() {
-        const res = await fetch(`https://dummyjson.com/products/search?q=${searchText}`);
-        const data = await res.json();
-        setProducts(data.products);
-    }
-
-    useEffect(() => {
-        getData();
-    }, [searchText]);
-
-    const goToProductPage = (id) => {
-        navigate(`/product/${id}`);
-    };
+const SearchPage = (props) => {
+    const { categories, searchText, setSearchText } = props;
+    const products = useGetProducts(searchText);
 
     return (
         <>
@@ -27,11 +12,7 @@ const SearchPage = ({ categories, searchText, setSearchText }) => {
             <CategoryBar categories={categories} />
             <div>
                 {products.map((elem) => {
-                    return (
-                        <p key={elem.id} onClick={() => goToProductPage(elem.id)}>
-                            {elem.title}
-                        </p>
-                    );
+                    return <p key={elem.id}>{elem.title}</p>;
                 })}
             </div>
         </>
