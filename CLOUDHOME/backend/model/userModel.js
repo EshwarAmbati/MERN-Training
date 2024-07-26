@@ -1,11 +1,12 @@
 const mongoose = require("mongoose");
-const bcrypt = require('bcrypt');
+const bcrypt = require("bcrypt");
+
 const userSchema = new mongoose.Schema({
     name: String,
-    imageUrl :String,
-    isEmailVerified:{
-        type:Boolean,
-        default:false,
+    imageUrl: String,
+    isEmailVerified: {
+        type: Boolean,
+        default: false,
     },
     email: {
         type: String,
@@ -30,16 +31,15 @@ userSchema.methods.verifyPassword = async (password, hashedPassword) => {
     return bcrypt.compare(password, hashedPassword);
 };
 
-userSchema.pre('save',async function(next){
-    if(this.isModified("password")){
-        const hashPassword = await bcrypt.hash(this.password,12);   
-        this.password = hashPassword;
+userSchema.pre("save", async function (next) {
+    if (this.isModified("password")) {
+        const hashedPassword = await bcrypt.hash(this.password, 12);
+        this.password = hashedPassword;
         next();
-    }else{
+    } else {
         next();
     }
-   
-})
+});
 
 const UserModel = mongoose.model("Users", userSchema);
 
