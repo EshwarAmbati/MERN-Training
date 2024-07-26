@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "parcel index.html --dist-dir ../backend/public"
+    "start": "parcel index.html"
   },
   "author": "",
   "license": "ISC",

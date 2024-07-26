@@ -8,10 +8,10 @@ const express = require("express");
 const cors = require("cors");
 const verifyToken = require("./middlewares/verifyToken.js");
 const fileRouter = require("./routes/fileRoutes.js");
-const path = require("path");
+// const path = require("path");
 
-// Serve static files from the 'public' directory. can put after the express.json() line.
-app.use(express.static(path.join(__dirname, "public")));
+// // Serve static files from the 'public' directory. can put after the express.json() line.
+// app.use(express.static(path.join(__dirname, "public")));
 
 
 const app = express();
